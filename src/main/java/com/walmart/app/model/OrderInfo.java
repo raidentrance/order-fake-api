@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  */
 @Entity
 @Table(name = "orderinfo")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class OrderInfo {
 	@Id
 	@Column(name = "id", nullable = false)
@@ -38,6 +38,9 @@ public class OrderInfo {
 	@Column(name = "last_update_ts")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date lastUpdateTs;
+
+	@Column(name = "delivery_time")
+	private String deliveryPeriod;
 
 	@Column(name = "status")
 	@Enumerated(EnumType.STRING)
@@ -84,6 +87,14 @@ public class OrderInfo {
 
 	public void setItems(List<Item> items) {
 		this.items = items;
+	}
+
+	public String getDeliveryPeriod() {
+		return deliveryPeriod;
+	}
+
+	public void setDeliveryPeriod(String deliveryPeriod) {
+		this.deliveryPeriod = deliveryPeriod;
 	}
 
 	@Override

@@ -8,5 +8,5 @@ package com.walmart.app.model;
  *
  */
 public enum OrderInfoStatus {
-	DELIVERED, REFUNDED, REFUND_REQUESTED;
+	RECEIVED, IN_PROGRESS, UNDERWAY, NEEDS_REVIEW, DELIVERED, REFUNDED, REFUND_REQUESTED;
 }

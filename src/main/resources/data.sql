@@ -3,5 +3,5 @@ insert into item (id,name,description,price,url,order_id) values (2,'Gears of Wa
 insert into item (id,name,description,price,url,order_id) values (3,'Mass Effect Andromeda Xbox One','Si eres fanático de la franquicia Mass Effect, entonces debes estar feliz de que EA haya anunciado que este año saldrá una nueva entrega la cual puedes adquirir en la tienda en línea de walmart.com.mx para tu consola Xbox One.',499,'https://www.walmart.com.mx/videojuegos/Xbox-One/Juegos/Mass-Effect%20-Andromeda-Xbox-One_00001463373670','701-4833756-5422650');
 
 
-insert into orderinfo (id,delivery_date,last_update_ts,status) values('701-5152599-0149056','2019-01-01','2018-12-30 10:00:00','DELIVERED');
-insert into orderinfo (id,delivery_date,last_update_ts,status) values('701-4833756-5422650','2019-01-01','2018-12-30 10:00:00','DELIVERED');
+insert into orderinfo (id,delivery_date,last_update_ts,delivery_time,status) values('701-5152599-0149056','2019-01-01','2018-12-30 10:00:00','10:00-11:00','DELIVERED');
+insert into orderinfo (id,delivery_date,last_update_ts,delivery_time,status) values('701-4833756-5422650','2019-01-01','2018-12-30 10:00:00','14:00-16:00','DELIVERED');
