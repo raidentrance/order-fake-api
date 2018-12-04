@@ -34,4 +34,8 @@ public class TwitterService {
 		QueryResult search = twitter.search(new Query(query));
 		return search.getTweets();
 	}
+	
+	public Status postStatus(String text) throws TwitterException {
+		return twitter.updateStatus(text);
+	}
 }
