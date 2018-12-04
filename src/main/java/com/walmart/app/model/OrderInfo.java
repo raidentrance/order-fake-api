@@ -48,6 +48,76 @@ public class OrderInfo {
 
 	@OneToMany(mappedBy = "orderInfo", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Item> items;
+	
+	@Column(name = "client_name")
+	private String clientName;
+	
+	@Column(name = "delivery_address")
+	private String deliveryAddress;
+	
+	@Column(name = "payment_method")
+	private String paymentMethod;
+	
+	@Column(name = "contact_phone")
+	private String contactPhone;
+	
+	@Column(name = "carrier")
+	private String carrier;
+	
+	@Column(name = "channel")
+	private String channel;
+	
+	@Column(name = "in_transit_date")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date inTransitDate;
+
+	public String getClientName() {
+		return clientName;
+	}
+
+	public void setClientName(String clientName) {
+		this.clientName = clientName;
+	}
+
+	public String getDeliveryAddress() {
+		return deliveryAddress;
+	}
+
+	public void setDeliveryAddress(String deliveryAddress) {
+		this.deliveryAddress = deliveryAddress;
+	}
+
+	public String getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(String paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+
+	public String getContactPhone() {
+		return contactPhone;
+	}
+
+	public void setContactPhone(String contactPhone) {
+		this.contactPhone = contactPhone;
+	}
+
+	public String getCarrier() {
+		return carrier;
+	}
+
+	public void setCarrier(String carrier) {
+		this.carrier = carrier;
+	}
+
+	public String getChannel() {
+		return channel;
+	}
+
+	public void setChannel(String channel) {
+		this.channel = channel;
+	}
 
 	public String getOrderId() {
 		return orderId;
@@ -95,6 +165,14 @@ public class OrderInfo {
 
 	public void setDeliveryPeriod(String deliveryPeriod) {
 		this.deliveryPeriod = deliveryPeriod;
+	}
+
+	public Date getInTransitDate() {
+		return inTransitDate;
+	}
+
+	public void setInTransitDate(Date inTransitDate) {
+		this.inTransitDate = inTransitDate;
 	}
 
 	@Override
